@@ -10,6 +10,15 @@ body {
     color: #222;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0;
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -25,6 +34,7 @@ button {
     border: none;
     outline: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .center {
@@ -43,7 +53,7 @@ button {
 
 .btn-pink:hover {
     color: #FFFFFF;
-    background: #F16D7F;
+    background: $colorSelect;
 }
 
 .header {
@@ -65,8 +75,6 @@ button {
 
 .promo {
     background: rgba(113, 103, 105, 0.08);
-    /* padding-left: calc(50% - 800px);
-    padding-right: calc(50% - 800px); */
     display: flex;
 }
 
@@ -83,7 +91,7 @@ button {
     top: 2px;
     width: 12px;
     height: 100%;
-    background-color: #F16D7F;
+    background-color: $colorSelect;
 }
 
 .promo__heading {
@@ -99,7 +107,7 @@ button {
 }
 
 .promo__text span {
-    color: #F16D7F;
+    color: $colorSelect;
 }
 
 .promo__left {
@@ -169,7 +177,7 @@ button {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-    color: #F16D7F;
+    color: $colorSelect;
 }
 
 .product {
@@ -230,7 +238,7 @@ button {
 .product__item-price {
     font-size: 16px;
     line-height: 19px;
-    color: #F16D7F;
+    color: $colorSelect;
 }
 
 .product__item-img {
@@ -411,7 +419,7 @@ button {
     font-size: 14px;
     line-height: 25px;
     color: #FFFFFF;
-    background-color: #F16D7F;
+    background-color: $colorSelect;
     padding: 17px 20px 15px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -459,7 +467,7 @@ button {
 }
 
 .footer__social-link:hover {
-    background: #F16D7F;
+    background: $colorSelect;
 }
 
 .footer__social-link:hover svg path {
@@ -484,7 +492,8 @@ button {
 .top__title {
     font-size: 24px;
     line-height: 29px;
-    color: #F16D7F;
+    color: $colorSelect;
+    font-weight: 400;
 }
 
 .breadcrumbs__list {
@@ -520,7 +529,7 @@ button {
 }
 
 .breadcrumbs__list span a {
-    color: #F16D7F;
+    color: $colorSelect;
     font-weight: 700;
 }
 
@@ -529,7 +538,7 @@ button {
 }
 
 .breadcrumbs__link:hover {
-    color: #F16D7F;
+    color: $colorSelect;
 }
 
 .product-page__top {
@@ -540,6 +549,7 @@ button {
 
 .product-page__sorting {
     display: flex;
+    margin-left: calc(33.333333% - 70px);
 }
 
 .product__sorting {
@@ -697,7 +707,6 @@ button {
 .product-page__filter {
     cursor: pointer;
     padding-left: 16px;
-    margin-right: 320px;
     position: relative;
     z-index: 10;
 }
@@ -775,4 +784,107 @@ button {
     margin: 11px 0 11px 34px;
 }
 
+.product__filter-item:hover {
+    color: #F26376;
+}
+
 /* catalog end */
+/* product start */
+.product__slider {
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.product__slider-item {
+    text-align: center;
+}
+
+.page-content {
+    background-color: #fff;
+    padding: 64px 0;
+    text-align: center;
+    border: 1px solid #EAEAEA;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.page-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    border-bottom: 1px solid #EAEAEA;
+    max-width: 641px;
+    margin: 0 auto;
+}
+
+.page-content-suptitle {
+    font-size: 14px;
+    line-height: 17px;
+    color: $colorSelect;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.page-content-suptitle::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 3px;
+    background-color: #EF5B70;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.page-content-title {
+    font-size: 18px;
+    line-height: 22px;
+    color: #4D4D4D;
+    margin-top: 27px;
+}
+
+.page-content-text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin: 48px 0 32px;
+    color: #5E5E5E;
+    max-width: 585px;
+}
+
+.page-content-price {
+    font-size: 24px;
+    line-height: 29px;
+    color: #EF5B70;
+    margin-bottom: 64px;
+}
+
+.page-content-sorting {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    margin-bottom: 48px;
+}
+
+.page-content-btn {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.page-content-btn svg {
+    margin-right: 22px;
+}
+
+.page-content-btn:hover svg path {
+    fill: #fff;
+}
+
+.product-page.product {
+    padding-bottom: 128px;
+}
+
+/* product end */
