@@ -9,14 +9,60 @@
     display: flex
     justify-content: space-between
     align-items: center
-
+    position: relative
+    &__left
+        display: flex
+        align-items: center
+    &__right
+        display: flex
+        align-items: center
     &__search
         margin-left: 41px
 
     &__account
         margin-left: 34px
         margin-right: 34px
+    &__box_nav
+        display: none
+#switcher
+    position: absolute
+    left: -999999px
+    visibility: hidden
+    &:checked ~ .drop
+        opacity: 1
 
+.drop
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 37px 32px
+    position: absolute
+    right: 0
+    opacity: 0
+    top: 75px
+    font-size: 14px
+    line-height: 17px
+    width: $widthMenu
+    height: 764px
+    transition: all .4s
+    z-index: 1
+    &__box
+        margin-top: 20px
+    &__name
+        font-weight: bold
+    &__heading
+        color: $colorSelect
+        &:hover
+            text-decoration: underline
+    &__ul
+        margin-top: 12px
+        padding-left: 20px
+    &__link
+        color: #6F6E6E
+        margin-bottom: 11px
+        display: block
+        transition: all .3s
+        &:hover
+            color: $colorSelect
 .promo
     background: rgba(113, 103, 105, 0.08)
     display: flex
@@ -607,13 +653,13 @@
         display: flex
         flex-direction: column
 
-    &__filter-item
+    &-item
         font-size: 14px
         line-height: 17px
         color: #6F6E6E
         margin: 11px 0 11px 34px
 
-    &__filter-item:hover
+    &-item:hover
         color: #F26376
 
 /* catalog end */
@@ -672,6 +718,7 @@
         line-height: 22px
         color: #4D4D4D
         margin-top: 27px
+        font-weight: 300
 
     &__text
         font-size: 14px
@@ -839,3 +886,5 @@
             width: 20px
             height: 16px
 /* registration end */
+
+@import 'media'

@@ -12,6 +12,7 @@
     display: flex
     background-color: #fff
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13))
+    position: relative
     &_mb
         margin-bottom: 40px
     &__heading
@@ -39,6 +40,11 @@
     &-buttons
         display: flex
         justify-content: space-between
+    &__close
+        position: absolute
+        right: 22px
+        top: 28px
+        cursor: pointer
 
 .shipping
     max-width: 360px
@@ -48,8 +54,10 @@
         font-size: 16px
         line-height: 19px
         color: #222222
+        margin-bottom: 20px
     &__input
         width: 100%
+        margin-bottom: 20px
     &__btn
         margin-bottom: 57px
 
